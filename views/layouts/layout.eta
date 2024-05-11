@@ -10,7 +10,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
-    <body class="container w-100">
+    <body class="container w-100 m-0 p-0">
         <%~ it.body %>
     </body>
   </html>
