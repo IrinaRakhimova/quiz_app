@@ -9,8 +9,8 @@
 
 <div>
     <div>
-        <a href="/topics">See topics (requires login)</a><br/>
-        <a href="/quiz">Quiz (requires login)</a><br/>
+        <a href="/topics" class="btn btn-primary">See topics (requires login)</a><br/>
+        <a href="/quiz" class="btn btn-primary">Quiz (requires login)</a><br/>
     </div>
 
 <h1>Statistics!</h1>
