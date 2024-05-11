@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html>
+  <html class="w-100 h-100">
     <head>
       <title>Quiz app</title>
     <meta charset="utf-8">
@@ -11,14 +11,19 @@
     </head>
 
     <body>
-    <div class="d-flex justify-content-between align-items-center bg-secondary w-100">
-    <h1 class="text-light mx-3">QUIZ APP</h1>
-    <div class="d-grid gap-2 d-md-block mx-3">
-        <a href="/auth/login" class="btn btn-light text-body" type="button">Login</a>
-        <a href="/auth/register" class="btn btn-light text-body" type="button">Register</a>
-    </div>
-</div>
-        <%~ it.body %>
+      <header class="d-flex justify-content-between align-items-center bg-secondary w-100">
+        <h1 class="text-light mx-3">QUIZ APP</h1>
+        <div class="d-grid gap-2 d-md-block mx-3">
+          <a href="/auth/login" class="btn btn-light text-body" type="button">Login</a>
+          <a href="/auth/register" class="btn btn-light text-body" type="button">Register</a>
+        </div>
+      </header>
+
+    <%~ it.body %>
+
+    <footer class="bg-secondary text-center text-light">
+      <p>Quiz App (2024)</p>
+    </footer>
     </body>
   </html>
  

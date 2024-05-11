@@ -5,12 +5,15 @@
   <p><%= it.error %></p>
 <% } %>
 
+
+<div class="d-flex justify-content-center align-items-center">
 <form method="POST" action="/auth/login">
   Email:<br/>
   <input type="email" name="email" /><br/>
   Password:<br/>
   <input type="password" name="password" /><br/>
-  <input type="submit" value="Login" />
+  <input type="submit" value="Login" class="btn btn-primary" />
 </form>
 
 <a href="/auth/register">Not yet registered? Register here.</a>
+</div>
