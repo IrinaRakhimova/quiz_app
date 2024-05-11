@@ -1,5 +1,5 @@
 <% layout("./layouts/layout.eta") %>
-<div class="d-flex justify-content-between bg-secondary w-auto">
+<div class="d-flex justify-content-between bg-secondary w-100">
     <h1>QUIZ APP</h1>
     <div class="d-grid gap-2 d-md-block">
         <a href="/auth/login" class="btn btn-primary text-light" type="button">Login</a>
