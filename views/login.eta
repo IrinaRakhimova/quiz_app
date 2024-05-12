@@ -2,7 +2,7 @@
 
 <h1 class="text-center mt-4">Login form</h1>
 
-<form method="POST" action="/auth/login" class="d-flex justify-content-center">
+<form method="POST" action="/auth/login" class="d-flex flex-column justify-content-center align-items-center">
   <% if(it.error) {  %>
     <p class="text-center text-danger"><%= it.error %></p>
   <% } %>
