@@ -1,6 +1,6 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1 class="text-center mt-4">Login form</h1>
+<h1 class="text-center mt-4">Login</h1>
 
 <form method="POST" action="/auth/login" class="d-flex flex-column justify-content-center align-items-center">
   <% if(it.error) {  %>
