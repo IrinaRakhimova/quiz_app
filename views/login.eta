@@ -7,15 +7,15 @@
     <p class="text-center text-danger"><%= it.error %></p>
   <% } %>
 
-  <div data-mdb-input-init class="form-outline mb-4">
-    <input type="email" name="email" id="emaillogin" class="form-control form-control-lg" />
+  <div class="form-group">
     <label class="form-label" for="emaillogin">Email address</label>
+    <input type="email" name="email" id="emaillogin" placeholder="Enter email"/> 
   </div>
   
-  <div data-mdb-input-init class="form-outline mb-4">
-    <input type="password" name="password" id="passwordlogin" class="form-control form-control-lg" />
-  <label class="form-label" for="passwordlogin">Password</label>
-
+  <div class="form-group">
+    <label for="passwordlogin">Password</label>
+    <input type="password" name="password" id="passwordlogin" placeholder="Password" />
+  
   <input type="submit" value="Login" class="btn btn-primary m-2 text-center" />
 </form>
 
