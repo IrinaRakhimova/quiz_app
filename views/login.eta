@@ -1,6 +1,6 @@
 <% layout("./layouts/layout.eta") %>
 
-<div class="d-flex flex-column justify-content-center align-items-center">
+<div>
   <div class="flex-fill">
     <h1>Login form</h1>
 
