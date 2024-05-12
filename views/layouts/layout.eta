@@ -20,7 +20,7 @@
       </header>
       
     <div class="d-flex">
-      <div class="flex-fill">  
+      <div class="flex-fill align-self-stretch">  
         <%~ it.body %>
       </div>
     </div>
