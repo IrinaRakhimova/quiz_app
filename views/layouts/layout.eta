@@ -41,21 +41,7 @@
     </div>
   </header>
 
-  <div class="content">
-    <div class="d-flex justify-content-center my-5">
-      <div class="d-flex flex-column justify-content-center mx-5">
-        <a href="/topics" class="btn btn-primary" type="button">See topics (requires login)</a><br/>
-        <a href="/quiz" class="btn btn-primary" type="button">Quiz (requires login)</a><br/>
-      </div>
-
-      <div class="mx-5">
-        <h1>Statistics</h1>
-        <p>Topics: <%= it.topicsCount %></p>
-        <p>Questions: <%= it.questionsCount %></p>
-        <p>Answers: <%= it.answersCount %></p>
-      </div>
-    </div>
-  </div>
+  <%~ it.body %>
 
   <footer class="bg-secondary text-center text-light">
     <p class="p-3">Quiz App (2024)</p>
