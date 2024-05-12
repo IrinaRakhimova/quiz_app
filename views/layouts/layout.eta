@@ -44,7 +44,7 @@
   <%~ it.body %>
 
   <footer class="bg-secondary text-center text-light">
-    <p class="p-3">Quiz App (2024)</p>
+    <p class="p-3 m-0">Quiz App (2024)</p>
   </footer>
 </body>
 </html>

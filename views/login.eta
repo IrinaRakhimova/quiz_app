@@ -1,18 +1,21 @@
 <% layout("./layouts/layout.eta") %>
 
-  <h1 class="text-center mt-3">Login form</h1>
+<h1 class="text-center mt-3">Login form</h1>
 
+<form method="POST" action="/auth/login">
   <% if(it.error) {  %>
     <p class="text-center text-danger"><%= it.error %></p>
   <% } %>
 
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="email" name="email" id="emaillogin" class="form-control form-control-lg" />
+    <label class="form-label" for="emaillogin">Email address</label>
+  </div>
+  
+  <div data-mdb-input-init class="form-outline mb-4">
+    <input type="password" name="password" id="passwordlogin" class="form-control form-control-lg" />
+  <label class="form-label" for="passwordlogin">Password</label>
 
-
-<form method="POST" action="/auth/login" class="text-center">
-  Email:
-  <input type="email" name="email" /><br/>
-  Password:
-  <input type="password" name="password" /><br/>
   <input type="submit" value="Login" class="btn btn-primary m-2 text-center" />
 </form>
 
