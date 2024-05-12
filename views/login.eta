@@ -1,23 +1,19 @@
 <% layout("./layouts/layout.eta") %>
 
-<div>
-  <div class="flex-fill">
-    <h1>Login form</h1>
+  <h1 class="text-center mt-3">Login form</h1>
 
-    <% if(it.error) {  %>
-      <p><%= it.error %></p>
-    <% } %>
+  <% if(it.error) {  %>
+    <p class="text-center text-danger"><%= it.error %></p>
+  <% } %>
 
 
 
-  <form method="POST" action="/auth/login">
-    Email:<br/>
-    <input type="email" name="email" /><br/>
-    Password:<br/>
-    <input type="password" name="password" /><br/>
-    <input type="submit" value="Login" class="btn btn-primary m-2 text-center" />
-  </form>
+<form method="POST" action="/auth/login" class="text-center">
+  Email:
+  <input type="email" name="email" /><br/>
+  Password:
+  <input type="password" name="password" /><br/>
+  <input type="submit" value="Login" class="btn btn-primary m-2 text-center" />
+</form>
 
-  <a href="/auth/register">Not yet registered? Register here.</a>
-  </div>
-</div>
+<a href="/auth/register" class="text-center">Not yet registered? Register here.</a>

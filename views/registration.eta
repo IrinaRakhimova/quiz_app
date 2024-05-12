@@ -1,8 +1,8 @@
 <% layout("./layouts/layout.eta") %>
-<h1 class="text-center">Registration form</h1>
+<h1 class="text-center mt-3">Registration form</h1>
 
 <% if (it.validationErrors) { %>
-<ul class="text-center">
+<ul class="text-center text-danger">
     <% Object.keys(it.validationErrors).forEach((attribute) => { %>
          <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
             <li><%= err %></li>
@@ -12,11 +12,11 @@
 <% } %>
 
 <form method="POST" action="/auth/register" class="text-center">
-  Email:<br/>
+  Email:
   <input type="email" name="email" /><br/>
-  Password:<br/>
+  Password:
   <input type="password" name="password" /><br/>
-  <input type="submit" value="Register" class="text-center m-2" />
+  <input type="submit" value="Register" class="btn btn-primary m-2 text-center" />
 </form>
 
-<a href="/auth/login">Already registered? Login here.</a>
+<a href="/auth/login" class="text-center">Already registered? Login here.</a>
