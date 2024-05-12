@@ -2,8 +2,8 @@
 <div class="content">
     <div class="d-flex justify-content-center my-5">
       <div class="d-flex flex-column justify-content-center mx-5">
-        <a href="/topics" class="btn btn-primary" type="button">See topics (requires login)</a><br/>
-        <a href="/quiz" class="btn btn-primary" type="button">Quiz (requires login)</a><br/>
+        <a href="/topics" class="btn btn-primary" type="button">See topics</a><br/>
+        <a href="/quiz" class="btn btn-primary" type="button">Quiz</a><br/>
       </div>
 
       <div class="mx-5">
