@@ -18,11 +18,15 @@
           <a href="/auth/register" class="btn btn-light text-body" type="button">Register</a>
         </div>
       </header>
-
-    <%~ it.body %>
+      
+    <div class="d-flex">
+      <div class="flex-fill">  
+        <%~ it.body %>
+      </div>
+    </div>
 
     <footer class="bg-secondary text-center text-light">
-      <p class="p-5">Quiz App (2024)</p>
+      <p class="p-3 m-0">Quiz App (2024)</p>
     </footer>
     </body>
   </html>
