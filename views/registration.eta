@@ -1,22 +1,30 @@
 <% layout("./layouts/layout.eta") %>
-<h1>Registration form</h1>
 
-<% if (it.validationErrors) { %>
-<ul>
-    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
-         <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+<h1 class="text-center mt-4">Registration</h1>
+
+<form method="POST" action="/auth/register" class="d-flex flex-column justify-content-center align-items-center">
+  <% if (it.validationErrors) { %>
+    <ul class="text-center text-danger">
+      <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+          <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
             <li><%= err %></li>
-        <% }); %>
-    <% }); %>
-</ul>
-<% } %>
+          <% }); %>
+      <% }); %>
+    </ul>
+  <% } %>
 
-<form method="POST" action="/auth/register">
-  Email:<br/>
-  <input type="email" name="email" /><br/>
-  Password:<br/>
-  <input type="password" name="password" /><br/>
-  <input type="submit" value="Register" />
+  <div class="form-group">
+    <label class="form-label" for="emailreg">Email address</label><br/>
+    <input type="email" name="email" id="emailreg" placeholder="Enter email"/> 
+  </div>
+  
+  <div class="form-group">
+    <label for="passwordreg">Password</label><br/>
+    <input type="password" name="password" id="passwordreg" placeholder="Password" />
+  </div> 
+
+  <input type="submit" value="Register" class="btn btn-primary m-2 text-center" />
+
+  <a href="/auth/login" class="text-center">Already registered? Login here.</a>
 </form>
 
-<a href="/auth/login">Already registered? Login here.</a>
