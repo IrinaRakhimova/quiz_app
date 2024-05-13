@@ -21,7 +21,7 @@
     </form>
 
     <h2>Current topics</h2>
-
+</div>
       <% if (it.topics && it.topics.length > 0) { %>
       <div class="d-flex justify-content-center">
         <div class="card m-4">
@@ -61,7 +61,7 @@
     <% } %>
   <% 
   } %>
-</div>  
+
 
 
 
