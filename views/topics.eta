@@ -2,7 +2,7 @@
 
 <div class="content">
 <div class="d-flex flex-column justify-content-center align-items-center">
-  <h1>Topics</h1>
+  <h1 class="m-3">Topics</h1>
 
   <% if (it.admin) { %>
     <% if (it.data.validationErrors) { %>
@@ -45,9 +45,7 @@
 
 <% } else {
   %> 
-    <h2>Current topics</h2>
-
-    <% if (it.topics && it.topics.length > 0) { %>
+     <% if (it.topics && it.topics.length > 0) { %>
       <ul>
         <% it.topics.forEach(topic => { %>
           <li>
