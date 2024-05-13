@@ -14,11 +14,13 @@
       </ul>
     <% } %>
 
-<form method="POST" action="/topics/<%= it.topic.id %>" class="form-floating">
-  <textarea name="question_text" placeholder="Add Question" class="form-control" id="floatingTextarea" style="height: 100px"></textarea><br/>
-  <label for="floatingTextarea">Comments</label>
-  <input type="submit" value="Add Question" class="btn btn-primary m-2" />
-</form>
+  <form method="POST" action="/topics/<%= it.topic.id %>">
+    <div class="form-floating">
+      <textarea name="question_text" placeholder="Add Question" class="form-control" id="floatingTextarea" style="height: 100px"></textarea><br/>
+      <label for="floatingTextarea">Comments</label>
+    </div>  
+    <input type="submit" value="Add Question" class="btn btn-primary m-2" />
+  </form>
 </div>
 
 <% if (it.questions && it.questions.length > 0) { %>

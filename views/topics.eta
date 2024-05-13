@@ -15,9 +15,11 @@
         </ul>
       <% } %>
 
-      <form method="POST" action="/topics" class="form-floating mb-3">
-        <input type="text" name="name" id="name" class="form-control" placeholder="Topic Name"/>
-        <label for="name">Topic Name</label>
+      <form method="POST" action="/topics">
+        <div class="form-floating mb-3">
+          <input type="text" name="name" id="name" class="form-control" placeholder="Topic Name"/>
+          <label for="name">Topic Name</label>
+        </div>  
         <input type="submit" value="Add" class="btn btn-primary m-2 text-center" />
       </form>
 
