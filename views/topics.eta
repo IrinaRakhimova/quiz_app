@@ -1,67 +1,64 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1>Topics</h1>
+<div class="d-flex flex-column justify-content-center align-items-center">
+  <h1>Topics</h1>
 
-<% if (it.admin) { %>
-<h2>Add topic</h2>
-<% if (it.data.validationErrors) { %>
-<ul>
-    <% Object.keys(it.data.validationErrors).forEach((attribute) => { %>
-         <% Object.values(it.data.validationErrors[attribute]).forEach((err) => { %>
-            <li><%= err %></li>
+  <% if (it.admin) { %>
+    <h2>Add topic</h2>
+    <% if (it.data.validationErrors) { %>
+      <ul>
+        <% Object.keys(it.data.validationErrors).forEach((attribute) => { %>
+          <% Object.values(it.data.validationErrors[attribute]).forEach((err) => { %>
+            <li class="text-center text-danger"><%= err %></li>
+          <% }); %>
         <% }); %>
-    <% }); %>
-</ul>
-<% } %>
+      </ul>
+    <% } %>
 
-<form method="POST" action="/topics">
-  Name:<br/>
-  <input type="text" name="name" /><br/>
-  <input type="submit" value="Add" />
-</form>
+    <form method="POST" action="/topics">
+      <label for="name">Topic Name</label><br/>
+      <input type="text" name="name" id="name" placeholder="Name"/><br/>
+      <input type="submit" value="Add" class="btn btn-primary m-2 text-center" />
+    </form>
 
-<h2>Current topics</h2>
+    <h2>Current topics</h2>
 
-<% if (it.topics && it.topics.length > 0) { %>
+      <% if (it.topics && it.topics.length > 0) { %>
+        <ul>
+          <% it.topics.forEach(topic => { %>
+            <li>            
+              <a href="/topics/<%= topic.id %>"><%= topic.name %></a>
 
-<ul>
-<% it.topics.forEach(topic => { %>
-  <li>
-  <a href="/topics/<%= topic.id %>"><%= topic.name %></a>
-    <form action="/topics/<%= topic.id %>/delete" method="POST">
-      <input type="submit" value="Delete" />
-    </form> 
-  </li>
-<% }); %>
-</ul>
+              <form action="/topics/<%= topic.id %>/delete" method="POST">
+              <input type="submit" value="Delete" />
+              </form> 
+            </li>
+          <% }); %>
+        </ul>
 
-<% } else { %>
+      <% } else { %>
+        <p>No topics.</p>
+      <% } %>
 
-<p>No topics.</p>
+  <% } else {
+  %> 
+    <h2>Current topics</h2>
 
-<% } %>
+    <% if (it.topics && it.topics.length > 0) { %>
+      <ul>
+        <% it.topics.forEach(topic => { %>
+          <li>
+            <a href="/topics/<%= topic.id %>"><%= topic.name %></a> 
+          </li>
+        <% }); %>
+      </ul>
 
-<% } else {
-%> 
-<h2>Current topics</h2>
-
-<% if (it.topics && it.topics.length > 0) { %>
-
-<ul>
-<% it.topics.forEach(topic => { %>
-  <li>
-  <a href="/topics/<%= topic.id %>"><%= topic.name %></a> 
-  </li>
-<% }); %>
-</ul>
-
-<% } else { %>
-
-<p>No topics.</p>
-
-<% } %>
-<% 
-} %>
+    <% } else { %>
+      <p>No topics.</p>
+    <% } %>
+  <% 
+  } %>
+</div>  
 
 
 
