@@ -1,45 +1,54 @@
 <% layout("./layouts/layout.eta") %>
-<h1><%= it.question.text %></h1>
 
-<% if (it.validationErrors) { %>
-<ul>
-    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
-         <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
-            <li><%= err %></li>
+<div class="content">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <h2><%= it.question.text %></h3>
+
+    <% if (it.validationErrors) { %>
+    <ul class="text-center text-danger">
+        <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+            <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+                <li><%= err %></li>
+            <% }); %>
         <% }); %>
-    <% }); %>
-</ul>
-<% } %>
+    </ul>
+    <% } %>
 
-<h2>Add options</h2>
-<form method="POST" action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options">
-  Option:<br/>
-  <textarea name="option_text" ></textarea><br/>
-  Correct answer:
-  <input type="checkbox" name="is_correct" /><br/>
-  <input type="submit" value="Add question" />
-</form>
-
-<h2>Options</h2>
-
-<% if (it.options && it.options.length > 0) { %>
-
-<ul>
-<% it.options.forEach(option => { %>
-  <li>
-  <%= option.option_text %>
-  <%= option.is_correct %>
-  <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%=option.id %>/delete" method="POST">
-      <input type="submit" value="Delete" />
+    <form method="POST" action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options">
+      <label for="answer">Add answer option:</label><br/>
+      <textarea name="option_text" id="answer"></textarea><br/>
+      <label for="correct">Correct answer:</label>
+      <input type="checkbox" name="is_correct" id="correct" /><br/>
+      <input type="submit" value="Add question" class="btn btn-primary my-1"/>
     </form>
-  </li>
-<% }); %>
-</ul>
+  </div>
 
-<% } else { %>
+  <div class="card">
 
-<form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/delete" method="POST">
-      <input type="submit" value="Delete question" />
+  <div class="card-header">
+    <h2>Options</h2>
+  </div>
+
+  <% if (it.options && it.options.length > 0) { %>
+
+  <ul class="list-group list-group-flush">
+  <% it.options.forEach(option => { %>
+    <li>
+    <%= option.option_text %>
+    <%= option.is_correct %>
+    <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%=option.id %>/delete" method="POST">
+        <input type="submit" value="Delete" />
+      </form>
+    </li>
+  <% }); %>
+  </ul>
+
+  <% } else { %>
+
+  <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/delete" method="POST">
+        <input type="submit" value="Delete question" class="btn btn-danger m-2" />
   </form>
 
-<% } %>
+  <% } %>
+  </div>
+</div>
