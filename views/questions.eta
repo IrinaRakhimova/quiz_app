@@ -14,9 +14,10 @@
       </ul>
     <% } %>
 
-<form method="POST" action="/topics/<%= it.topic.id %>">
-  <textarea name="question_text" placeholder="Add Question"></textarea><br/>
-  <input type="submit" value="Add question" />
+<form method="POST" action="/topics/<%= it.topic.id %>" class="form-floating">
+  <textarea name="question_text" placeholder="Add Question" class="form-control" id="floatingTextarea" style="height: 100px"></textarea><br/>
+  <label for="floatingTextarea">Comments</label>
+  <input type="submit" value="Add Question" class="btn btn-primary m-2" />
 </form>
 </div>
 
