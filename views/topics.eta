@@ -46,16 +46,21 @@
 <% } else {
   %> 
      <% if (it.topics && it.topics.length > 0) { %>
-      <ul>
+      <div class="d-flex justify-content-center flex-row flex-wrap">
         <% it.topics.forEach(topic => { %>
-          <li>
-            <a href="/topics/<%= topic.id %>"><%= topic.name %></a> 
-          </li>
+          <div class="card m-4">
+            <div class="card-header text-center"> 
+              <%= topic.name %>
+            </div> 
+            <div div class="card-body d-flex">            
+              <a href="/topics/<%= topic.id %>" class="btn btn-primary m-2">Open</a>
+            </div>   
+          </div> 
         <% }); %>
-      </ul>
+      </div>
 
     <% } else { %>
-      <p>No topics.</p>
+      <p>No topics yet.</p>
     <% } %>
   <% 
   } %>
