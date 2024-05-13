@@ -23,7 +23,7 @@
     <h2>Current topics</h2>
 </div>
       <% if (it.topics && it.topics.length > 0) { %>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center flex-row flex-wrap">
         <div class="card m-4">
           <% it.topics.forEach(topic => { %>
             <div class="card-header"> 
