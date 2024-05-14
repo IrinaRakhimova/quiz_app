@@ -1,16 +1,16 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="content">
-  <div class="card my-3">
+  <div class="card">
 
     <div class="card-header">
-      <strong class="fs-3">Topics</strong>
+      <strong class="fs-4">Topics</strong>
     </div> 
 
     <% if (it.topics && it.topics.length > 0) { %>
       <ul class="list-group list-group-flush">
         <% it.topics.forEach(topic => { %>
-          <li class="list-unstyled fs-3">
+          <li class="list-group-item">
             <a href="/quiz/<%= topic.id %>"><%= topic.name %></a> 
           </li>
         <% }); %>

@@ -2,7 +2,7 @@
 
 <div class="content">
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <h1><%= it.questionText %></h1>
+    <h1 class="my-3"><%= it.questionText %></h1>
 
     <div class="card my-3">
       <ul class="list-group list-group-flush">
