@@ -5,6 +5,6 @@
 
     <p class="text-center">The correct option was "<%= it.rightOption %>"</p>
 
-    <a href="/quiz/<%= it.topicId %>" class="text-center">Next question</a><br/>
+    <p class="text-center"><a href="/quiz/<%= it.topicId %>" >Next question</a></p>
 
 </div>
