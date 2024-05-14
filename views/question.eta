@@ -23,16 +23,16 @@
     </form>
   </div>
 
-  <div class="card">
+  <div class="card my-3">
     <div class="card-header">
-      <p><strong>Options</strong></p>
+      <p m-0><strong>Options</strong></p>
     </div>
 
     <% if (it.options && it.options.length > 0) { %>
       <ul class="list-group list-group-flush">
         <% it.options.forEach(option => { %>
           <li class="d-flex">
-            <% if (option.is_correct === "true")  { %>
+            <% if (option.is_correct === "on")  { %>
               <p class="text-success"><%= option.option_text %> (correct)</p>
             <% } else { %>
               <p class="text-danger"><%= option.option_text %></p>
@@ -42,11 +42,11 @@
             <% } %>
           </li>
         <% }); %>
-      </ul>
-    <% } else { %>
+      </ul>  
+  </div>
+  <% } else { %>
       <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/delete" method="POST" class="d-flex justify-content-center">
         <input type="submit" value="Delete question" class="btn btn-danger m-2" />
       </form>
     <% } %>
-  </div>
 </div>
