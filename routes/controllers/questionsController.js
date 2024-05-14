@@ -9,12 +9,13 @@ const getQuestionData = async (request) => {
   const topicId = urlParts[2];
   const body = request.body({ type: "form" });
   const params = await body.value;
+  const topic = await topicsService.findTopicById(topicId);
 
 
     const data = {
       question_text: params.get("question_text"),
       questions: await questionsService.findQuestionsById(topicId),
-      topic: { id: topicId },
+      topic: { id: topicId, name: topic.name },
       errors: {}, 
     };
 
