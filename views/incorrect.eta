@@ -1,6 +1,10 @@
 <% layout("./layouts/layout.eta") %>
-<h1>Incorrect!</h1>
 
-<p>The correct option was "<%= it.rightOption %>"</p>
+<div class="content">
+    <h1 class="m-3 text-danger text-center">Incorrect!</h1>
 
-<a href="/quiz/<%= it.topicId %>">Next question</a><br/>
+    <p class="text-center">The correct option was "<%= it.rightOption %>"</p>
+
+    <p class="text-center"><a href="/quiz/<%= it.topicId %>" >Next question</a></p>
+
+</div>

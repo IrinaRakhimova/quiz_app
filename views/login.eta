@@ -1,5 +1,6 @@
 <% layout("./layouts/layout.eta") %>
 
+<div class="content">
 <h1 class="text-center mt-4">Login</h1>
 
 <form method="POST" action="/auth/login" class="d-flex flex-column justify-content-center align-items-center">
@@ -21,5 +22,6 @@
 
   <a href="/auth/register" class="text-center">Not yet registered? Register here.</a>
 </form>
+</div>
 
 

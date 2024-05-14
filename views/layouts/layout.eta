@@ -18,15 +18,13 @@
     }
 
     .content {
-      flex: 1; /* Take up remaining vertical space */
+      flex: 1; 
     }
 
     footer {
-      position: fixed;
-      bottom: 0;
       width: 100%;
-      background-color: #343a40; /* Adjust as needed */
-      color: white; /* Adjust as needed */
+      background-color: #343a40; 
+      color: white; 
       text-align: center;
     }
   </style>
