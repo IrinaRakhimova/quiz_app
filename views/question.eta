@@ -16,7 +16,7 @@
 
     <form method="POST" action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options">
       <label for="answer">Add answer option:</label><br/>
-      <textarea name="option_text" id="answer" class="w-50 form-control"></textarea><br/>
+      <textarea name="option_text" id="answer" class="form-control"></textarea><br/>
       <label for="correct">Correct answer:</label>
       <input type="checkbox" name="is_correct" id="correct" /><br/>
       <input type="submit" value="Add question" class="btn btn-primary my-1"/>
@@ -25,7 +25,7 @@
 
   <div class="card my-3">
     <div class="card-header">
-      <p m-0><strong>Options</strong></p>
+      <strong>Options</strong>
     </div>
 
     <% if (it.options && it.options.length > 0) { %>
@@ -40,16 +40,17 @@
             <% } else { %>
               <p class="text-danger"><%= option.option_text %></p>
               <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%=option.id %>/delete" method="POST">
-                <input type="submit" value="Delete" class="btn btn-danger mx-3"/>
+                <input type="submit" value="Delete" class="btn btn-danger mx-3 btn-sm"/>
               </form>
             <% } %>
           </li>
         <% }); %>
       </ul>  
-  </div>
+  
   <% } else { %>
       <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/delete" method="POST" class="d-flex justify-content-center">
         <input type="submit" value="Delete question" class="btn btn-danger m-2" />
       </form>
     <% } %>
+    </div>
 </div>

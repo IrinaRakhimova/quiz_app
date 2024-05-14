@@ -1,27 +1,24 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="content">
-  <div class="d-flex flex-column justify-content-center align-items-center">
+  <div class="card my-3">
 
-    <div class="card my-3">
+    <div class="card-header">
+      <strong><p>Topics</p></strong>
+    </div> 
 
-      <div class="card-header">
-        <strong><p>Topics</p></strong>
-      </div> 
+    <% if (it.topics && it.topics.length > 0) { %>
+      <ul class="list-group list-group-flush">
+        <% it.topics.forEach(topic => { %>
+          <li class="list-unstyled">
+            <a href="/quiz/<%= topic.id %>"><%= topic.name %></a> 
+          </li>
+        <% }); %>
+      </ul>
 
-      <% if (it.topics && it.topics.length > 0) { %>
-        <ul class="list-group list-group-flush">
-          <% it.topics.forEach(topic => { %>
-            <li>
-              <a href="/quiz/<%= topic.id %>"><%= topic.name %></a> 
-            </li>
-          <% }); %>
-        </ul>
-
-        <% } else { %>
-          <p>No topics.</p>
-        <% } %>
-    </div>
+      <% } else { %>
+        <p>No topics.</p>
+      <% } %>
   </div>
 </div>
 
