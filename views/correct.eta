@@ -1,5 +1,7 @@
 <% layout("./layouts/layout.eta") %>
 
-<h1>Correct!</h1>
+<div class="content">
+    <h1 class="m-3 text-success text-center">Correct!</h1>
 
-<a href="/quiz/<%= it.topicId %>">Next question</a><br/>
+    <a href="/quiz/<%= it.topicId %>" class="text-center">Next question</a><br/>
+</div>     
