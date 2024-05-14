@@ -5,10 +5,10 @@
 
 <form method="POST" action="/auth/register" class="d-flex flex-column justify-content-center align-items-center">
   <% if (it.validationErrors) { %>
-    <ul class="text-center text-danger">
+    <ul class="list-unstyled">
       <% Object.keys(it.validationErrors).forEach((attribute) => { %>
           <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
-            <li><%= err %></li>
+            <li class="text-center text-danger"><%= err %></li>
           <% }); %>
       <% }); %>
     </ul>

@@ -6,7 +6,7 @@
 
     <% if (it.admin) { %>
       <% if (it.data.validationErrors) { %>
-        <ul>
+        <ul class="list-unstyled">
           <% Object.keys(it.data.validationErrors).forEach((attribute) => { %>
             <% Object.values(it.data.validationErrors[attribute]).forEach((err) => { %>
               <li class="text-center text-danger"><%= err %></li>
@@ -25,7 +25,7 @@
           <% it.topics.forEach(topic => { %>
             <div class="card m-4">
               <div class="card-header text-center"> 
-                <%= topic.name %>
+                <strong><%= topic.name %></strong>
               </div> 
               <div div class="card-body d-flex">            
                 <a href="/topics/<%= topic.id %>" class="btn btn-primary m-2">Open</a>
