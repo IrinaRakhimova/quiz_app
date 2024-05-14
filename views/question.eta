@@ -32,14 +32,14 @@
       <ul class="list-group list-group-flush">
         <% it.options.forEach(option => { %>
           <li class="d-flex">
-            <% if (option.is_correct === "on")  { %>
-              <p class="text-success"><%= option.option_text %> (correct)</p>
-            <% } else { %>
-              <p class="text-danger"><%= option.option_text %></p>
-              <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%=option.id %>/delete" method="POST">
-                <input type="submit" value="Delete" class="btn btn-danger m-2"/>
-              </form>
-            <% } %>
+            <% if (option.is_correct)  { %>
+  <p class="text-success"><%= option.option_text %> (correct)</p>
+<% } else { %>
+  <p class="text-danger"><%= option.option_text %></p>
+  <form action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options/<%=option.id %>/delete" method="POST">
+    <input type="submit" value="Delete" class="btn btn-danger m-2"/>
+  </form>
+<% } %>
           </li>
         <% }); %>
       </ul>  
