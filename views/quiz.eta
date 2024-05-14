@@ -4,13 +4,13 @@
   <div class="card my-3">
 
     <div class="card-header">
-      <strong><p>Topics</p></strong>
+      <strong class="fs-3">Topics</strong>
     </div> 
 
     <% if (it.topics && it.topics.length > 0) { %>
       <ul class="list-group list-group-flush">
         <% it.topics.forEach(topic => { %>
-          <li class="list-unstyled">
+          <li class="list-unstyled fs-3">
             <a href="/quiz/<%= topic.id %>"><%= topic.name %></a> 
           </li>
         <% }); %>

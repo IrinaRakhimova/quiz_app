@@ -2,7 +2,7 @@
 
 <div class="content">
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <strong><%= it.topic.name %></strong>
+    <strong my-3>Questions</strong>
 
     <% if (it.validationErrors) { %>
       <ul class="list-unstyled">

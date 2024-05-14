@@ -1,13 +1,19 @@
 <% layout("./layouts/layout.eta") %>
-<h1><%= it.questionText %></h1>
 
-<ul>
-<% it.options.forEach(option => { %>
-  <li>
-  <%= option.option_text %>
-  <form action="/quiz/<%= it.topicId %>/questions/<%= it.question.id %>/options/<%= option.id %>" method="POST">
-      <input type="submit" value="Choose" />
-    </form> 
-  </li>
-<% }); %>
-</ul>
+<div class="content">
+  <div class="d-flex flex-column justify-content-center align-items-center">
+    <h1><%= it.questionText %></h1>
+
+    <div class="card my-3">
+      <ul class="list-group list-group-flush">
+        <% it.options.forEach(option => { %>
+          <li class="list-group-item d-flex">
+            <%= option.option_text %>
+            <form action="/quiz/<%= it.topicId %>/questions/<%= it.question.id %>/options/<%= option.id %>" method="POST">
+              <input type="submit" value="Choose" class="btn btn-primary mx-3" btn-sm/>
+            </form> 
+          </li>
+        <% }); %>
+     </ul>
+  </div>
+</div>
