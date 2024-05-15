@@ -2,7 +2,7 @@
 
 <div class="content">
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <strong my-3>Questions</strong>
+    <strong my-3><%= it.topic.name %></strong>
 
     <% if (it.validationErrors) { %>
       <ul class="list-unstyled">
@@ -14,30 +14,26 @@
       </ul>
     <% } %>
 
-  <form method="POST" action="/topics/<%= it.topic.id %>" class="d=flex">
-    <textarea name="question_text" placeholder="Add Question" class="form-control" id="floatingTextarea" style="height: 100px"></textarea><br/>
-    <input type="submit" value="Add Question" class="btn btn-primary" />
-  </form>
-</div>
-
-<% if (it.questions && it.questions.length > 0) { %>
-
-<div class="card my-3">
-  <div class="card-header">
-    <strong>Current questions:</strong>
+    <form method="POST" action="/topics/<%= it.topic.id %>" class="d=flex">
+      <textarea name="question_text" placeholder="Add Question" class="form-control" id="floatingTextarea" style="height: 100px"></textarea><br/>
+      <input type="submit" value="Add Question" class="btn btn-primary" />
+    </form>
   </div>
-  <ul class="list-group list-group-flush">
-  <% it.questions.forEach(question => { %>
-    <li class="list-group-item">
-      <a href="/topics/<%= it.topic.id %>/questions/<%= question.id %>"><%= question.question_text %></a>
-    </li>
-  <% }); %>
-  </ul>
-</div>
 
-<% } else { %>
-
-<p>No questions yet.</p>
-
-<% } %>
+  <% if (it.questions && it.questions.length > 0) { %>
+    <div class="card my-3">
+      <div class="card-header">
+        <strong>Current questions:</strong>
+      </div>
+      <ul class="list-group list-group-flush">
+        <% it.questions.forEach(question => { %>
+          <li class="list-group-item">
+            <a href="/topics/<%= it.topic.id %>/questions/<%= question.id %>"><%= question.question_text %></a>
+          </li>
+        <% }); %>
+      </ul>
+    </div>
+  <% } else { %>
+    <p>No questions yet.</p>
+  <% } %>
 </div>
