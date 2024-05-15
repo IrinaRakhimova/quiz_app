@@ -3,7 +3,7 @@
 <div class="content">
   <div class="d-flex flex-column justify-content-center align-items-center">
   <% console.log("Topic data:", it.topic); %>
-    <strong my-3><%= it.topic.name %></strong>
+    <h2 class="my-2"><%= it.topic.name %></h2>
 
     <% if (it.validationErrors) { %>
       <ul class="list-unstyled">
