@@ -1,12 +1,12 @@
 <% layout("./layouts/layout.eta") %>
 <div class="content">
-  <div class="d-flex justify-content-center my-5 border border-primary rounded bg-primary-subtle p-4">
-    <div class="d-flex flex-column justify-content-center mx-5">
+  <div class="d-flex justify-content-center my-5 p-4">
+    <div class="d-flex flex-column justify-content-center mx-5 px-5">
       <a href="/topics" class="btn btn-primary" type="button">Topics</a><br/>
       <a href="/quiz" class="btn btn-primary" type="button">Quiz</a><br/>
     </div>
 
-    <div class="mx-5">
+    <div class="mx-5 border border-primary rounded bg-primary-subtle px-5">
       <h1>Statistics</h1>
       <p>Topics: <%= it.topicsCount %></p>
       <p>Questions: <%= it.questionsCount %></p>

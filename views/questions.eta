@@ -1,6 +1,7 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="content">
+  <a href="/topics" class="mx-3">< Back to Topics</a><br/>
   <div class="d-flex flex-column justify-content-center align-items-center">
   <% console.log("Topic data:", it.topic); %>
     <h2 class="my-2"><%= it.topic.name %></h2>
