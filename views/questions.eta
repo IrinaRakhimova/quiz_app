@@ -2,6 +2,7 @@
 
 <div class="content">
   <div class="d-flex flex-column justify-content-center align-items-center">
+  <% console.log("Topic data:", it.topic); %>
     <strong my-3><%= it.topic.name %></strong>
 
     <% if (it.validationErrors) { %>
