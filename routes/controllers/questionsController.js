@@ -54,6 +54,7 @@ const addQuestion = async ({ request, response, render, user }) => {
         user.id,
         data.topic.id,
         data.question_text,
+        data.topic.name,
       );
   
       response.redirect(`/topics/${data.topic.id}`);
