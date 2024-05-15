@@ -25,10 +25,9 @@ const findTopics = async () => {
   };
 
   const findTopicById = async (topicId) => {
-    console.log("Incoming Topic ID:", topicId);
     const rows = await sql`SELECT * FROM topics WHERE id = ${topicId};`;
-  
-    return rows;
+    return rows[0].name;
   };
+
 
 export { findTopics, findAdmin, addTopic, deleteTopic, findTopicById };
