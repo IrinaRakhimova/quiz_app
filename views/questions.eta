@@ -16,7 +16,7 @@
     <% } %>
 
     <form method="POST" action="/topics/<%= it.topic.id %>" class="d=flex">
-      <textarea name="question_text" placeholder="Add Question" class="form-control " style="height: 100px; width: 500px"></textarea><br/>
+      <textarea name="question_text" placeholder="Add Question" class="form-control" style="height: 100px; width: 500px"></textarea><br/>
       <input type="submit" value="Add Question" class="btn btn-primary" />
     </form>
   </div>

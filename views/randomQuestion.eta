@@ -7,7 +7,7 @@
     <div class="card my-3">
       <ul class="list-group list-group-flush">
         <% it.options.forEach(option => { %>
-          <li class="list-group-item d-flex">
+          <li class="list-group-item d-flex  align-items-center">
             <%= option.option_text %>
             <form action="/quiz/<%= it.topicId %>/questions/<%= it.question.id %>/options/<%= option.id %>" method="POST">
               <input type="submit" value="Choose" class="btn btn-primary mx-3" btn-sm/>
