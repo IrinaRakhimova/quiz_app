@@ -1,8 +1,9 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="content">
+  <a href="/topics/<%= it.topic.id %>" class="mx-3">< Back to Questions</a>
   <div class="d-flex flex-column justify-content-center align-items-center">
-    <h2 my-2><%= it.question.text %></h2>
+    <h2 class="my-2"><%= it.question.text %></h2>
 
     <% if (it.validationErrors) { %>
       <ul class="list-unstyled">
@@ -16,7 +17,7 @@
 
     <form method="POST" action="/topics/<%= it.topic.id %>/questions/<%= it.question.id %>/options">
       <label for="answer">Add answer option:</label><br/>
-      <textarea name="option_text" id="answer" class="form-control"></textarea><br/>
+      <textarea name="option_text" id="answer" class="form-control" style="height: 100px; width: 500px"></textarea><br/>
       <label for="correct">Correct answer:</label>
       <input type="checkbox" name="is_correct" id="correct" /><br/>
       <input type="submit" value="Add question" class="btn btn-primary my-1"/>
@@ -25,7 +26,7 @@
 
   <div class="card my-3">
     <div class="card-header">
-      <strong>Options</strong>
+      <strong>Options:</strong>
     </div>
 
     <% if (it.options && it.options.length > 0) { %>
