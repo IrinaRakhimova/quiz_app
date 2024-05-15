@@ -1,7 +1,7 @@
 <% layout("./layouts/layout.eta") %>
 
 <div class="content">
-  <div class="card">
+  <div class="card text-center">
 
     <div class="card-header">
       <strong class="fs-4">Topics</strong>

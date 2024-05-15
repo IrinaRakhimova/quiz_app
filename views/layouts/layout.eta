@@ -34,7 +34,7 @@
   <header class="d-flex justify-content-between align-items-center bg-secondary w-100">
     <h1><a href="/" class="text-light mx-3 text-decoration-none">QUIZ APP</a></h1>
 
-    <div>
+    <div class="d-flex justify-content-center align-items-center">
       <a href="/topics" class="text-light mx-3 text-decoration-none">Topics</a><br/>
       <a href="/quiz" class="text-light mx-3 text-decoration-none">Quiz</a><br/>
     </div>
